@@ -25,7 +25,7 @@ def check_dest_dir(dir):
     if not os.path.isdir(dir):
         os.mkdir(dir)
 
-def read_images(img_dir):
+def read_images(img_dir, img_ext):
     """
     Read all images in a directory
 
@@ -36,4 +36,4 @@ def read_images(img_dir):
     - list of image file paths
     """
 
-    return glob.glob(f'{img_dir}/*.JPG', recursive=True)
+    return glob.glob(f'{img_dir}/*{img_ext}', recursive=True)
