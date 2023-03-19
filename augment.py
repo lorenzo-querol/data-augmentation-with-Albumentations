@@ -9,7 +9,7 @@ from utils import check_img_dir, check_dest_dir, read_images
 parser = argparse.ArgumentParser()
 parser.add_argument('--i', help='Root directory of images to be augmented', required=True)
 parser.add_argument('--o', help='Destination directory to save augmented images', default='./augmented_images')
-parser.add_argument('--imgext', help='File extension of images, defaults to .jpg', default='.jpg')
+parser.add_argument('--ext', help='File extension of images, defaults to .JPG', default='.JPG')
 parser.add_argument('--numaug', help='Number of augmented images to create from each original image, defaults to 5 per image', default=5)
 
 args = parser.parse_args()
@@ -21,7 +21,7 @@ dest_dir = args.o
 check_img_dir(img_dir)
 check_dest_dir(dest_dir)
 
-image_paths = read_images(img_dir)
+image_paths = read_images(img_dir, img_ext)
 
 augmented_images = []
 for image_path in image_paths:
