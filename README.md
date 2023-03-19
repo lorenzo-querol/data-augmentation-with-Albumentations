@@ -31,7 +31,7 @@ options:
 ```
 python augment.py --i test_images --numaug 10
 ```
-This example will augment the folder `test_images` 10 times with varying combinations of transformations found in `transforms.py`.
+This example will augment each image in the folder `test_images` 10 times with varying combinations of transformations found in `transforms.py`.
 
 ## Customization
 Users can alter the basic pipeline found in `transforms.py` to include more augmentations found in the library's [documentation](https://albumentations.ai/docs/).
@@ -47,5 +47,3 @@ transform = A.Compose([
 
 ## Future Iterations
 - [ ] Include support for object detection tasks (i.e., bounding box augmentation)
-
-
