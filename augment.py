@@ -15,7 +15,7 @@ parser.add_argument('--numaug', help='Number of augmented images to create from 
 args = parser.parse_args()
 img_dir = args.i
 num_aug = int(args.numaug)
-img_ext = args.imgext
+img_ext = args.ext
 dest_dir = args.o
 
 check_img_dir(img_dir)
