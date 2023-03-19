@@ -38,3 +38,5 @@ for image_path in image_paths:
 
         augmented_image = cv.cvtColor(augmented_image, cv.COLOR_RGB2BGR) 
         cv.imwrite(augmented_filename, augmented_image)
+
+    cv.imwrite(filename + img_ext, image)
