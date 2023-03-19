@@ -27,6 +27,11 @@ options:
    --ext       The extension of the images to augment (default is .JPG)
    --numaug    Number of augmented images to create from each original image (default is 5)
 ```
+### Example
+```
+python augment.py --i test_images --numaug 10
+```
+This example will augment the folder `test_images` 10 times with varying combinations of transformations found in `transforms.py`.
 
 ## Customization
 Users can alter the basic pipeline found in `transforms.py` to include more augmentations found in the library's [documentation](https://albumentations.ai/docs/).
